@@ -81,6 +81,7 @@ uint32_t decode(const CodeUnit *code_unit) {
 
   return code_point;
 }
+
 int read_next_code_unit(FILE *in, CodeUnit *code_unit) {
   assert(code_unit != NULL);
   assert(in != NULL);
