@@ -15,3 +15,4 @@ void write_rand(const char *uncompress_path, const char *compress_path,
                 uint32_t count);
 uint32_t *read_uncompress(const char *uncompress_path);
 uint32_t *read_compress(const char *compress_path);
+long filesize(const char *filename);

@@ -117,3 +117,14 @@ uint32_t *read_compress(const char *compress_path) {
   free(buff);
   return result;
 }
+
+long filesize(const char *filename) {
+  FILE *file = fopen(filename, "rb");
+  if (file == NULL) {
+    return -1; // Обработка ошибки открытия файла
+  }
+  fseek(file, 0, SEEK_END);
+  long size = ftell(file);
+  fclose(file);
+  return size;
+}
